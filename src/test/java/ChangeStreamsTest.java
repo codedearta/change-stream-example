@@ -1,11 +1,9 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.*;
 import com.mongodb.client.model.Aggregates;
+import com.mongodb.client.model.changestream.ChangeStreamDocument;
 import com.mongodb.client.model.changestream.FullDocument;
 import org.bson.Document;
 import org.bson.conversions.Bson;
@@ -47,19 +45,19 @@ public class ChangeStreamsTest {
 
         mappingMongoCollection.insertOne(
                 new Document("_id", "transferInitiationReceived.customerPaymentStatusReport.grpHdr.msgId")
-                .append("type", "transferInitiationReceived")
+                .append("type", "TInitiationReceived")
                 .append("value", 12345)
         );
 
         mappingMongoCollection.insertOne(
                 new Document("_id", "transferInitiationReceived.customerPaymentStatusReport.grpHdr.creDtTm")
-                .append("type", "transferInitiationReceived")
+                .append("type", "TInitiationReceived")
                 .append("value", new Date())
         );
 
         mappingMongoCollection.insertOne(
                 new Document("_id", "transferInitiationReceived.customerPaymentStatusReport.grpHdr.nbOfTxs")
-                .append("type", "transferInitiationReceived")
+                .append("type", "TInitiationReceived")
                 .append("value", 5)
         );
 
@@ -112,20 +110,14 @@ public class ChangeStreamsTest {
         MongoDatabase db = mongoClient.getDatabase(dbName);
         final MongoCollection<Document> collection = db.getCollection(mappingCollectionName);
 
-        final Bson match = Aggregates.match(Document.parse("{'fullDocument.type': 'transferInitiationReceived'}"));
+        final Bson match = Aggregates.match(Document.parse("{'fullDocument.type': 'TInitiationReceived'}"));
 
         final List<Bson> pipeline = asList(match);
 
-        assertThrows(RuntimeException.class, () -> {
-            collection
-                    .watch(pipeline)
-                    .fullDocument(FullDocument.UPDATE_LOOKUP)
-                    .forEach(csEvent -> {
-                        // throw an exception to break the loop and report a change
-                        System.out.println(gson.toJson(csEvent));
-                        throw new RuntimeException(gson.toJson(csEvent));
-                    });
-        });
+        for (ChangeStreamDocument<Document> changeStreamDocument : collection.watch(pipeline).fullDocument(FullDocument.UPDATE_LOOKUP)) {// throw an exception to break the loop and report a change
+            System.out.println(gson.toJson(changeStreamDocument));
+            break; // break the loop to stop watching the change stream.
+        }
     }
 
     @Test
@@ -133,19 +125,13 @@ public class ChangeStreamsTest {
     public void trackChangesMappingMongoTest() {
         MongoDatabase db = mongoClient.getDatabase(dbName);
         final MongoCollection<Document> collection = db.getCollection(mappingMongoCollectionName);
-        final Bson match = Aggregates.match(Document.parse("{'fullDocument.type': 'transferInitiationReceived'}"));
+        final Bson match = Aggregates.match(Document.parse("{'fullDocument.type': 'TInitiationReceived'}"));
         final List<Bson> pipeline = asList(match);
 
-        assertThrows(RuntimeException.class, () -> {
-            collection
-                    .watch(pipeline)
-                    .fullDocument(FullDocument.UPDATE_LOOKUP)
-                    .forEach(csEvent -> {
-                        // throw an exception to break the loop and report a change
-                        System.out.println(gson.toJson(csEvent));
-                        throw new RuntimeException(gson.toJson(csEvent));
-                    });
-        });
+        for (ChangeStreamDocument<Document> changeStreamDocument : collection.watch(pipeline).fullDocument(FullDocument.UPDATE_LOOKUP)) {// throw an exception to break the loop and report a change
+            System.out.println(gson.toJson(changeStreamDocument));
+            break; // break the loop to stop watching the change stream.
+        }
     }
 
     @Test
@@ -154,20 +140,14 @@ public class ChangeStreamsTest {
         MongoDatabase db = mongoClient.getDatabase(dbName);
         final MongoCollection<Document> collection = db.getCollection(mappingNewCollectionName);
 
-        final Bson match = Aggregates.match(Document.parse("{'fullDocument.events.key': 'transferInitiationReceived'}"));
+        final Bson match = Aggregates.match(Document.parse("{'fullDocument.events.key': 'TInitiationReceived'}"));
 
         final List<Bson> pipeline = asList(match);
 
-        assertThrows(RuntimeException.class, () -> {
-            collection
-                    .watch(pipeline)
-                    .fullDocument(FullDocument.UPDATE_LOOKUP)
-                    .forEach(csEvent -> {
-                        // throw an exception to break the loop and report a change
-                        System.out.println(gson.toJson(csEvent));
-                        throw new RuntimeException(gson.toJson(csEvent));
-                    });
-        });
+        for (ChangeStreamDocument<Document> changeStreamDocument : collection.watch(pipeline).fullDocument(FullDocument.UPDATE_LOOKUP)) {// throw an exception to break the loop and report a change
+            System.out.println(gson.toJson(changeStreamDocument));
+            break; // break the loop to stop watching the change stream.
+        }
     }
 
     @AfterAll
