@@ -1,0 +1,526 @@
+{
+  "_id": 1,
+  "events": [
+    {
+      "key": "TInitiationReceived",
+      "value": [
+        {
+          "key": "CPStatusReport.grpHdr.msgId",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.messageIdentification"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.creDtTm",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.creationDateTime"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.nbOfTxs",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.numberOfTs"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.ctrlSum",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.controlSum"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.initgPty.nm",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.initiatingParty.name"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.initgPty.id.orgId.othr.id",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.initiatingParty.identification.organisationIdentification.other.identification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtInfId",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PInformationIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtMtd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PMethod"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.nbOfTxs",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.numberOfTs"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.ctrlSum",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.controlSum"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.reqdExctnDt",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.requestedExecutionDate"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.nm",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.name"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.pstlAdr.adrLine",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.PA.ALine"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.pstlAdr.ctry",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.PA.country"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.id.orgId.othr.id",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.identification.organisationIdentification.other.identification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.id.orgId.othr.schmeNm.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.identification.organisationIdentification.other.schemeName.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtrAcct.id.iBAN",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.DA.identification.IBAN"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtrAgt.finInstnId.bICFI",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.DAgent.FInstitutionIdentification.BICFI"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.chrgBr",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.chargeBearer"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.pmtId.instrId",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.PIdentification.instructionIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.pmtId.endToEndId",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.PIdentification.endToEndIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.amt.instdAmt.amount",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.amount.instructedAmount.amount"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.amt.instdAmt.C",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.amount.instructedAmount.C"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtrAgt.finInstnId.bICFI",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.CorAgent.FInstitutionIdentification.BICFI"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtr.nm",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.Cor.name"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtr.pstlAdr.adrLine",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.Cor.PA.ALine"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtr.pstlAdr.ctry",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.Cor.PA.country"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtr.id.orgId.othr.id",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.Cor.identification.organisationIdentification.other.identification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtr.id.orgId.othr.schmeNm.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.Cor.identification.organisationIdentification.other.schemeName.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtrAcct.id.iBAN",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.CorA.identification.IBAN"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.rmtInf.ustrd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.remittanceInformation.unstructured"
+        }
+      ]
+    },
+    {
+      "key": "TInitiationCompleted",
+      "value": [
+        {
+          "key": "CPStatusReport.grpHdr.msgId",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.messageIdentification"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.creDtTm",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.creationDateTime"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.nbOfTxs",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.numberOfTs"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.ctrlSum",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.controlSum"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.initgPty.nm",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.initiatingParty.name"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.initgPty.id.orgId.othr.id",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.initiatingParty.identification.organisationIdentification.other.identification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtInfId",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PInformationIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtMtd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PMethod"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.nbOfTxs",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.numberOfTs"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.ctrlSum",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.controlSum"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.reqdExctnDt",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.requestedExecutionDate"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.nm",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.name"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.pstlAdr.adrLine",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.PA.ALine"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.pstlAdr.ctry",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.PA.country"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.id.orgId.othr.id",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.identification.organisationIdentification.other.identification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.id.orgId.othr.schmeNm.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.identification.organisationIdentification.other.schemeName.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtrAcct.id.iBAN",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.DA.identification.IBAN"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtrAgt.finInstnId.bICFI",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.DAgent.FInstitutionIdentification.BICFI"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.chrgBr",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.chargeBearer"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.pmtId.instrId",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.PIdentification.instructionIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.pmtId.endToEndId",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.PIdentification.endToEndIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.amt.instdAmt.amount",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.amount.instructedAmount.amount"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.amt.instdAmt.C",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.amount.instructedAmount.C"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtrAgt.finInstnId.bICFI",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.CorAgent.FInstitutionIdentification.BICFI"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtr.nm",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.Cor.name"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtr.pstlAdr.adrLine",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.Cor.PA.ALine"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtr.pstlAdr.ctry",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.Cor.PA.country"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtr.id.orgId.othr.id",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.Cor.identification.organisationIdentification.other.identification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtr.id.orgId.othr.schmeNm.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.Cor.identification.organisationIdentification.other.schemeName.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.cdtrAcct.id.iBAN",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.CorA.identification.IBAN"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.rmtInf.ustrd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.remittanceInformation.unstructured"
+        }
+      ]
+    },
+    {
+      "key": "pens",
+      "value": [
+        {
+          "key": "CPStatusReport.pens.payEveKey.brand",
+          "value": "$.bE.eventBodyCCTInitiation.PENS.PEventKey.brand"
+        },
+        {
+          "key": "CPStatusReport.pens.payEveKey.channel",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.PEventKey.channel"
+        },
+        {
+          "key": "CPStatusReport.pens.payEveKey.payRef",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.PEventKey.PReference"
+        },
+        {
+          "key": "CPStatusReport.pens.sysID",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.systemID"
+        },
+        {
+          "key": "CPStatusReport.pens.paySchm",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.PScheme"
+        },
+        {
+          "key": "CPStatusReport.pens.payTyp",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.PType"
+        },
+        {
+          "key": "CPStatusReport.pens.eveTyp",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.eventType"
+        },
+        {
+          "key": "CPStatusReport.pens.eveSrc",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.eventSource"
+        },
+        {
+          "key": "CPStatusReport.pens.rscCd",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.reasonCode"
+        },
+        {
+          "key": "CPStatusReport.pens.rscDs",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.reasonDescription"
+        },
+        {
+          "key": "CPStatusReport.pens.payTs",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.PTimestamp"
+        },
+        {
+          "key": "CPStatusReport.pens.schRC",
+          "value": "$.bE.eventBody.CCTInitiation.PENS.schemeReasonCode"
+        }
+      ]
+    },
+    {
+      "key": "pac2",
+      "value": [
+        {
+          "key": "CPStatusReport.grpHdr.instgAgt.finInstnId.bICFI",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.instructingAgent.FInstitutionIdentification.BICFI"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.instdAgt.finInstnId.bICFI",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.instructedAgent.FInstitutionIdentification.BICFI"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtTpInf.instrPrty",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PTypeInformation.instructionPriority"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtTpInf.svcLvl.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PTypeInformation.serviceLevel.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtTpInf.lclInstrm.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PTypeInformation.localInstrument.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtTpInf.ctgyPurp.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PTypeInformation.categoryPurpose.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtrAgt.finInstnId.bICFI",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.DAgent.FInstitutionIdentification.BICFI"
+        },
+        {
+          "key": "CPStatusReport.grpInfAndSts.msgId",
+          "value": "$.bE.eventBody.CCTInitiation.originalGroupInformationAndStatus.originalMessageIdentification"
+        },
+        {
+          "key": "CPStatusReport.grpInfAndSts.msgNmId",
+          "value": "$.bE.eventBody.CCTInitiation.originalGroupInformationAndStatus.originalMessageNameIdentification"
+        },
+        {
+          "key": "CPStatusReport.grpInfAndSts.grpSts",
+          "value": "$.bE.eventBody.CCTInitiation.originalGroupInformationAndStatus.groupStatus"
+        },
+        {
+          "key": "CPStatusReport.grpInfAndSts.stsRsnInf.orgtr.nm",
+          "value": "$.bE.eventBody.CCTInitiation.originalGroupInformationAndStatus.statusReasonInformation.originator.name"
+        },
+        {
+          "key": "CPStatusReport.grpInfAndSts.stsRsnInf.orgtr.id.orgId.anyBIC",
+          "value": "$.bE.eventBody.CCTInitiation.originalGroupInformationAndStatus.statusReasonInformation.originator.identification.OrganisationIdentification.anyBIC"
+        },
+        {
+          "key": "CPStatusReport.grpInfAndSts.stsRsnInf.rsn.cd",
+          "value": "$.bE.eventBody.CCTInitiation.originalGroupInformationAndStatus.statusReasonInformation.reason.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInfAndSts.txInfAndSts.orgnlInstrId",
+          "value": "$.bE.eventBody.CCTInitiation.originalPInformationAndStatus.TInformationAndStatus.originalInstructionIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInfAndSts.txInfAndSts.orgnlEndToEndId",
+          "value": "$.bE.eventBody.CCTInitiation.originalPInformationAndStatus.TInformationAndStatus.originalEndToEndIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInfAndSts.txInfAndSts.txSts",
+          "value": "$.bE.eventBody.CCTInitiation.originalPInformationAndStatus.TInformationAndStatus.TStatus"
+        },
+        {
+          "key": "CPStatusReport.pmtInfAndSts.txInfAndSts.orgnlTxId",
+          "value": "$.bE.eventBody.CCTInitiation.originalPInformationAndStatus.TInformationAndStatus.originalTIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInfAndSts.txInfAndSts.stsId",
+          "value": "$.bE.eventBody.CCTInitiation.originalPInformationAndStatus.TInformationAndStatus.statusIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInfAndSts.txInfAndSts.stsRsnInf.orgtr.nm",
+          "value": "$.bE.eventBody.CCTInitiation.originalPInformationAndStatus.TInformationAndStatus.statusReasonInformation.originator.name"
+        },
+        {
+          "key": "CPStatusReport.pmtInfAndSts.txInfAndSts.stsRsnInf.orgtr.id.orgId.anyBIC",
+          "value": "$.bE.eventBody.CCTInitiation.originalPInformationAndStatus.TInformationAndStatus.statusReasonInformation.originator.identification.OrganisationIdentification.anyBIC"
+        },
+        {
+          "key": "CPStatusReport.pmtInfAndSts.txInfAndSts.stsRsnInf.rsn.cd",
+          "value": "$.bE.eventBody.CCTInitiation.originalPInformationAndStatus.TInformationAndStatus.statusReasonInformation.reason.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInfAndSts.txInfAndSts.accptncDtTm",
+          "value": "$.bE.eventBody.CCTInitiation.originalPInformationAndStatus.TInformationAndStatus.acceptanceDateTime"
+        }
+      ]
+    },
+    {
+      "key": "pac8",
+      "value": [
+        {
+          "key": "CPStatusReport.grpHdr.instgAgt.finInstnId.bICFI",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.instructingAgent.FInstitutionIdentification.BICFI"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.instdAgt.finInstnId.bICFI",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.instructedAgent.FInstitutionIdentification.BICFI"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.intrBkSttlmAmt",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.interbankSettlementAmount"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.intrBkSttlmDt",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.interbankSettlementDate"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.sttlmInf.sttlmMtd",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.settlementInformation.settlementMethod"
+        },
+        {
+          "key": "CPStatusReport.grpHdr.clrSys.cd",
+          "value": "$.bE.eventBody.CCTInitiation.groupHeader.clearingSystem.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtTpInf.instrPrty",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PTypeInformation.instructionPriority"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtTpInf.svcLvl.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PTypeInformation.serviceLevel.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtTpInf.lclInstrm.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PTypeInformation.localInstrument.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.pmtTpInf.ctgyPurp.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.PTypeInformation.categoryPurpose.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.nm",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.name"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.pstlAdr.adrLine",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.PA.ALine"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.pstlAdr.ctry",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.PA.country"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.id.orgId.othr.id",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.identification.organisationIdentification.other.identification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtr.id.orgId.othr.schmeNm.cd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.D.identification.organisationIdentification.other.schemeName.code"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtrAcct.id.iBAN",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.DA.identification.IBAN"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtrAcct.nm",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.DA.name"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.dbtrAgt.finInstnId.bICFI",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.DAgent.FInstitutionIdentification.BICFI"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.chrgBr",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.chargeBearer"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.pmtId.instrId",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.PIdentification.instructionIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.pmtId.txId",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.TIdentification"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.pmtId.intrBkSttlmAmt",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.interbankSettlementAmount "
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.accptncDtTm",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.acceptanceDateTime"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.ultmtDbtr.nm",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.ultimateD.name"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.ultmtDbtr.id.orgId.anyBIC",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.ultimateD.identification.OrganisationIdentification.anyBIC"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.ultmtCdtr.nm",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.ultimateCor.name"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.ultmtCdtr.id.orgId.anyBIC",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.ultimateCor.identification.OrganisationIdentification.anyBIC"
+        },
+        {
+          "key": "CPStatusReport.pmtInf.cdtTrfTxInf.rmtInf.ustrd",
+          "value": "$.bE.eventBody.CCTInitiation.PInformation.CTTInformation.remittanceInformation.unstructured"
+        }
+      ]
+    }
+  ]
+}
