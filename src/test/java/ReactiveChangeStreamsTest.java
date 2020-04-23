@@ -67,7 +67,9 @@ public class ReactiveChangeStreamsTest {
         final ChangeStreamPublisher<Document> watch = collection.watch(pipeline).fullDocument(FullDocument.UPDATE_LOOKUP);
         @NonNull final Flowable<String> flowable = Flowable.fromPublisher(watch).map(c -> gson.toJson(c));
         @NonNull final Disposable subscribe = flowable.subscribe(System.out::println);
-        Flowable.fromPublisher(collection.updateOne(new Document("type", "TInitiationReceived"),new Document("$set", new Document("mappings.cpsr_grpHdr_msgId", 4)))).blockingSingle();
+        Flowable.fromPublisher(collection.updateOne(new Document("type", "TInitiationReceived"),new Document("$set", new Document("mappings.cpsr_grpHdr_msgId", 1)))).blockingSingle();
+        Flowable.fromPublisher(collection.updateOne(new Document("type", "TInitiationReceived"),new Document("$set", new Document("mappings.cpsr_grpHdr_msgId", 2)))).blockingSingle();
+        Flowable.fromPublisher(collection.updateOne(new Document("type", "TInitiationReceived"),new Document("$set", new Document("mappings.cpsr_grpHdr_msgId", 3)))).blockingSingle();
 
         flowable.test().cancel();
     }
