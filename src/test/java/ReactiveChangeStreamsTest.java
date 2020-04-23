@@ -6,6 +6,7 @@ import com.mongodb.client.model.changestream.FullDocument;
 import com.mongodb.reactivestreams.client.*;
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.disposables.Disposable;
 import org.bson.Document;
 import org.bson.conversions.Bson;
@@ -58,7 +59,7 @@ public class ReactiveChangeStreamsTest {
     }
 
     @Test
-    public void trackChangesMappingTest() throws InterruptedException {
+    public void trackChangesMappingMultipleTest() {
         MongoDatabase db = mongoClient.getDatabase(dbName);
         final MongoCollection<Document> collection = db.getCollection(mappingCollectionName);
 
@@ -72,6 +73,19 @@ public class ReactiveChangeStreamsTest {
         Flowable.fromPublisher(collection.updateOne(new Document("type", "TInitiationReceived"),new Document("$set", new Document("mappings.cpsr_grpHdr_msgId", 3)))).blockingSingle();
 
         flowable.test().cancel();
+    }
+
+    @Test
+    public void trackChangesMappingFirstTest() throws InterruptedException {
+        MongoDatabase db = mongoClient.getDatabase(dbName);
+        final MongoCollection<Document> collection = db.getCollection(mappingCollectionName);
+
+        final Bson match = Aggregates.match(Document.parse("{'fullDocument.type': 'TInitiationReceived'}"));
+        final List<Bson> pipeline = asList(match);
+        final ChangeStreamPublisher<Document> watch = collection.watch(pipeline).fullDocument(FullDocument.UPDATE_LOOKUP);
+        final @NonNull Single<Object> single = Flowable.fromPublisher(watch).firstOrError().map(c -> gson.toJson(c));
+        single.subscribe(System.out::println);
+        Flowable.fromPublisher(collection.updateOne(new Document("type", "TInitiationReceived"),new Document("$set", new Document("mappings.cpsr_grpHdr_msgId", 1)))).blockingSingle();
     }
 
     @AfterAll
